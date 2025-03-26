@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allo Informatique</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="image/logo.png" alt="Allo Informatique">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <p>Inscription gratuite pour particulier</p>
+                <button onclick="openModal('utilisateur')">Inscription particulier !</button>
+            </div>
+            <div class="card">
+                <p>Inscription gratuite pour professionnel</p>
+                <button onclick="openModal('depanneur')">Inscription Pro !</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <p>Déjà inscrit ? Connectez-vous ici</p>
+                <button onclick="openModalLogin()">Se connecter</button>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <p class="highlight">-50 % sur toutes les réparations !</p>
+            <button>découvrir le crédit d'impôt</button>
+        </div>
+    </div>
+
+    <!-- Modale -->
+    <div class="modal" id="modal-register">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Connexion & Inscription</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <form id="modal-form" onsubmit="handleSubmit(event)">
+                <input type="hidden" id="role" name="role">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="mail">Email :</label>
+                <input type="email" id="mail" name="mail" required>
+                <label for="telephone">Téléphone :</label>
+                <input type="text" id="telephone" name="telephone">
+                <label for="mot_de_passe">Mot de passe :</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+                <p class="error-message" id="error-message" style="display: none;"></p>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-login">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Connexion</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <form id="modal-form-login" onsubmit="handleSubmitLogin(event)">
+                <label for="mail">Email :</label>
+                <input type="email" id="mail-login" name="mail" required>
+                <label for="mot_de_passe">Mot de passe :</label>
+                <input type="password" id="mot_de_passe-login" name="mot_de_passe" required>
+                <p class="error-message" id="error-message-login" style="display: none;"></p>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+    <script src="/script/index.js"></script>
+</body>
+</html>

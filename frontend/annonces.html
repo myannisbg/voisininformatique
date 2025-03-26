@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une annonce</title>
+    <link rel="stylesheet" href="/style/annonce.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Créer une annonce</h1>
+        <form id="annonce-form" onsubmit="handleAnnonceSubmit(event)">
+            <label for="titre">Titre :</label>
+            <input type="text" id="titre" name="titre" required>
+
+            <label for="description">Description :</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="categorie">Catégorie :</label>
+            <select id="categorie" name="categorie" required>
+                <option value="informatique">Informatique</option>
+                <option value="Ordinateur-fixe">Ordinateur-fixe</option>
+                <option value="Ordinateur-portable">Ordinateur-portable</option>
+                <option value="Imprimante">Imprimante</option>
+                <option value="Telephone">Téléphone</option>
+                <option value="Logiciel">Logiciel</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <label for="image">Image :</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit" class="btn">Publier l'annonce</button>
+        </form>
+    </div>
+
+    <script src="/script/annonce.js"></script>
+</body>
+</html>
