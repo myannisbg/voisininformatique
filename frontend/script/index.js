@@ -34,7 +34,7 @@ async function handleSubmit(event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/api/auth/register", {
+        const response = await fetch("https://voisininformatique.onrender.com/api/auth/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -68,7 +68,7 @@ async function handleSubmitLogin(event) {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/api/auth/login", {
+        const response = await fetch("https://voisininformatique.onrender.com/api/auth/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -102,7 +102,7 @@ async function checkTokenAndRedirect() {
 
     // Vérification de la validité du token via l'API
     try {
-        const response = await fetch("http://localhost:3000/api/auth/verify", {
+        const response = await fetch("https://voisininformatique.onrender.com/api/auth/verify", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
