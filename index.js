@@ -97,6 +97,6 @@ const createTables = async () => {
   };
 
 // initialise la base de donnée la 1er fois
-// createTables();
+createTables();
 
 export default app;
